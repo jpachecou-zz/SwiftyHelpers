@@ -13,6 +13,13 @@
 		ABEA31A91C4ECAD200C386C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31A81C4ECAD200C386C1 /* Assets.xcassets */; };
 		ABEA31AC1C4ECAD200C386C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31AA1C4ECAD200C386C1 /* LaunchScreen.storyboard */; };
 		ABEA31B71C4ECAD200C386C1 /* SwiftUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31B61C4ECAD200C386C1 /* SwiftUtilsTests.swift */; };
+		ABEA31C81C4ECAE200C386C1 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31C31C4ECAE200C386C1 /* Operators.swift */; };
+		ABEA31C91C4ECAE200C386C1 /* UIKit+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31C51C4ECAE200C386C1 /* UIKit+RegisterCells.swift */; };
+		ABEA31CA1C4ECAE200C386C1 /* FrameHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31C71C4ECAE200C386C1 /* FrameHelpers.swift */; };
+		ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */; };
+		ABEA31D51C4ECC2100C386C1 /* FrameHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */; };
+		ABEA31D71C4ED14600C386C1 /* NSObject+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31D61C4ED14600C386C1 /* NSObject+Utils.swift */; };
+		ABEA31D91C4ED17400C386C1 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31D81C4ED17400C386C1 /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		ABEA31B21C4ECAD200C386C1 /* SwiftUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEA31B61C4ECAD200C386C1 /* SwiftUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtilsTests.swift; sourceTree = "<group>"; };
 		ABEA31B81C4ECAD200C386C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABEA31C31C4ECAE200C386C1 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		ABEA31C51C4ECAE200C386C1 /* UIKit+RegisterCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+RegisterCells.swift"; sourceTree = "<group>"; };
+		ABEA31C71C4ECAE200C386C1 /* FrameHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameHelpers.swift; sourceTree = "<group>"; };
+		ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+RegisterCellTest.swift"; sourceTree = "<group>"; };
+		ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameHelpersTest.swift; sourceTree = "<group>"; };
+		ABEA31D61C4ED14600C386C1 /* NSObject+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Utils.swift"; sourceTree = "<group>"; };
+		ABEA31D81C4ED17400C386C1 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,10 @@
 		ABEA31A01C4ECAD200C386C1 /* SwiftUtils */ = {
 			isa = PBXGroup;
 			children = (
+				ABEA31C11C4ECAE200C386C1 /* Foundation */,
+				ABEA31C21C4ECAE200C386C1 /* Operators */,
+				ABEA31C41C4ECAE200C386C1 /* UIKit */,
+				ABEA31C61C4ECAE200C386C1 /* Utils */,
 				ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */,
 				ABEA31A31C4ECAD200C386C1 /* ViewController.swift */,
 				ABEA31A51C4ECAD200C386C1 /* Main.storyboard */,
@@ -90,10 +108,69 @@
 		ABEA31B51C4ECAD200C386C1 /* SwiftUtilsTests */ = {
 			isa = PBXGroup;
 			children = (
+				ABEA31CB1C4ECC2100C386C1 /* Foundation */,
+				ABEA31CC1C4ECC2100C386C1 /* UIKit */,
+				ABEA31CF1C4ECC2100C386C1 /* Utils */,
 				ABEA31B61C4ECAD200C386C1 /* SwiftUtilsTests.swift */,
 				ABEA31B81C4ECAD200C386C1 /* Info.plist */,
 			);
 			path = SwiftUtilsTests;
+			sourceTree = "<group>";
+		};
+		ABEA31C11C4ECAE200C386C1 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA31D61C4ED14600C386C1 /* NSObject+Utils.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		ABEA31C21C4ECAE200C386C1 /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA31C31C4ECAE200C386C1 /* Operators.swift */,
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
+		ABEA31C41C4ECAE200C386C1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA31C51C4ECAE200C386C1 /* UIKit+RegisterCells.swift */,
+				ABEA31D81C4ED17400C386C1 /* UIView+Utils.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		ABEA31C61C4ECAE200C386C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA31C71C4ECAE200C386C1 /* FrameHelpers.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ABEA31CB1C4ECC2100C386C1 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		ABEA31CC1C4ECC2100C386C1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		ABEA31CF1C4ECC2100C386C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABEA31A41C4ECAD200C386C1 /* ViewController.swift in Sources */,
+				ABEA31C91C4ECAE200C386C1 /* UIKit+RegisterCells.swift in Sources */,
+				ABEA31D91C4ED17400C386C1 /* UIView+Utils.swift in Sources */,
 				ABEA31A21C4ECAD200C386C1 /* AppDelegate.swift in Sources */,
+				ABEA31D71C4ED14600C386C1 /* NSObject+Utils.swift in Sources */,
+				ABEA31CA1C4ECAE200C386C1 /* FrameHelpers.swift in Sources */,
+				ABEA31C81C4ECAE200C386C1 /* Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABEA31B71C4ECAD200C386C1 /* SwiftUtilsTests.swift in Sources */,
+				ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */,
+				ABEA31D51C4ECC2100C386C1 /* FrameHelpersTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
