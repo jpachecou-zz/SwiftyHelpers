@@ -32,11 +32,15 @@ public extension UIView {
  - returns: First elemend find of the genericType
  */
 public func getSubviewIntoView<T: UIView>(intoView: UIView) -> T? {
+    print("IntoView count subviews: \(intoView.subviews.count)")
     for view in intoView.subviews {
         if view.classForCoder is T.Type {
+            print("Found: \(view) is \(T.self)")
             return view as? T
         }
-        return getSubviewIntoView(view)
+        if let view: T = getSubviewIntoView(view) {
+            return view
+        }
     }
     return nil
 }
@@ -49,7 +53,7 @@ public func getSubviewIntoView<T: UIView>(intoView: UIView) -> T? {
  - returns: Loaded view class
  */
 public func loadCustomView<T: UIView>() -> T? {
-    let views = NSBundle.mainBundle().loadNibNamed(T.identifier, owner: nil, options: nil)
+    let views = NSBundle(forClass: T.self).loadNibNamed(T.identifier, owner: nil, options: nil)
     if views.count > 0 {
         return views.first as? T
     }

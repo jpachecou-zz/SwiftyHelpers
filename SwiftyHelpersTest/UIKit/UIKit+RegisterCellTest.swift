@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SwiftUtils
+@testable import SwiftyHelpers
 
 class UIKit_RegisterCellTest: XCTestCase {
     
@@ -19,6 +19,14 @@ class UIKit_RegisterCellTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
+    
+    func testRegisterTableViewCell() {
+        
+        let tableView = UITableView()
+        tableView <= TestTableViewCell.self
+        
+        let cell: TestTableViewCell = tableView.cellForClass()
+        XCTAssertNotNil(cell, "Cell register cannot be nil")
+    }
 
 }

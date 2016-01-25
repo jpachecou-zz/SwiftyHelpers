@@ -42,10 +42,10 @@ func -(date: NSDate, days: Int) -> NSDate? {
 }
 
 /**
- Checks if a date is within a range of two dates
+ Checks if a date is within a range of two rhs
  
  ```
- if date <=> (start: date1, end: date2) {
+ if date <=> (lhs, rhs) {
     // The date is within the range
  }
  ```
@@ -62,69 +62,61 @@ func <=>(date: NSDate, tuple:(start: NSDate, end: NSDate)) -> Bool {
 /**
  Checks if date of left is greater than or equals that date of right
  
- - parameter dateF: Left date
- - parameter dateS: Right date
+ - parameter lhs: Left date
+ - parameter rhs: Right date
  
  - returns: If date of left is greater than or equals
  */
-func >=(dateF: NSDate, dateS: NSDate) -> Bool {
-    return evaluateComponent(dateF, dateS, useOperator: >= )
+func >=(lhs: NSDate, rhs: NSDate) -> Bool {
+    return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: >= )
 }
 
 /**
   Checks if date of left is less than or equals that date of right
  
- - parameter dateF: Left date
- - parameter dateS: Right date
+ - parameter lhs: Left date
+ - parameter rhs: Right date
  
  - returns: If date of left is greater than or equals
  */
-func <=(dateF: NSDate, dateS: NSDate) -> Bool {
-    return evaluateComponent(dateF, dateS, useOperator: <= )
+func <=(lhs: NSDate, rhs: NSDate) -> Bool {
+    return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: <= )
 }
 
 /**
  Checks if date of left is greater than that date of right
  
- - parameter dateF: Left date
- - parameter dateS: Right date
+ - parameter lhs: Left date
+ - parameter rhs: Right date
  
  - returns: If date of left is greater than
  */
-func >(dateF: NSDate, dateS: NSDate) -> Bool {
-    return evaluateComponent(dateF, dateS, useOperator: > )
+func >(lhs: NSDate, rhs: NSDate) -> Bool {
+    return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: > )
 }
 
 /**
  Checks if date of left is less than that date of right
  
- - parameter dateF: Left date
- - parameter dateS: Right date
+ - parameter lhs: Left date
+ - parameter rhs: Right date
  
  - returns: If date of left is less than
  */
-func <(dateF: NSDate, dateS: NSDate) -> Bool {
-    return evaluateComponent(dateF, dateS, useOperator: < )
+func <(lhs: NSDate, rhs: NSDate) -> Bool {
+    return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: < )
 }
 
 /**
  Evaluates two components of date type, for generate a result
  
- - parameter dateF:    Left date
- - parameter dateS:    Right date
+ - parameter lhs: Left date
+ - parameter rhs: Right date
  - parameter callback: Callback for apply operation
  
  - returns: Result of evaluation
  */
-private func evaluateComponent(dateF: NSDate, _ dateS: NSDate, useOperator callback: (Int, Int) -> Bool) -> Bool {
-    let calendar = NSCalendar.currentCalendar()
-    let componentsF = calendar.components([.Month, .Day, .Year], fromDate: dateF)
-    let componentsS = calendar.components([.Month, .Day, .Year], fromDate: dateS)
-    
-    var result = false
-    result =  callback(componentsF.year, componentsS.year)
-    result = result && callback(componentsF.month, componentsS.month)
-    result = result && callback(componentsF.day, componentsS.day)
-    
-    return result
+private func evaluateComponent(lhs: NSTimeInterval, _ rhs: NSTimeInterval,
+    useOperator callback: (NSTimeInterval, NSTimeInterval) -> Bool) -> Bool {
+        return callback(lhs, rhs)
 }

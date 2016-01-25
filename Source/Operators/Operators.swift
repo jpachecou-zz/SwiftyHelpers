@@ -9,10 +9,6 @@
 import Foundation
 
 /**
-*  - Register cells
-*/
-infix operator <= { associativity left precedence 160 }
-/**
 *  Date between into two dates
 */
 infix operator <=> { associativity left precedence 160 }

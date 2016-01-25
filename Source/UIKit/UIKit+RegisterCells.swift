@@ -11,7 +11,7 @@ import UIKit
 extension UITableViewCell {
     
     private static func registerCellInTableView(tableView: UITableView) {
-        let nib = UINib(nibName: self.identifier, bundle: nil)
+        let nib = UINib(nibName: self.identifier, bundle: NSBundle(forClass: self))
         tableView.registerNib(nib, forCellReuseIdentifier: self.identifier)
     }
 }
@@ -19,7 +19,7 @@ extension UITableViewCell {
 extension UICollectionViewCell {
     
     private static func registerCellInCollectionView(collectionView: UICollectionView) {
-        let nib = UINib(nibName: self.identifier, bundle: nil)
+        let nib = UINib(nibName: self.identifier, bundle: NSBundle(forClass: self))
         collectionView.registerNib(nib, forCellWithReuseIdentifier: self.identifier)
     }    
 }

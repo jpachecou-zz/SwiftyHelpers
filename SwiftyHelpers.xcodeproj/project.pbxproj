@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */; };
+		ABA91B761C55B0AC003D0CAB /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */; };
+		ABA91B811C55B812003D0CAB /* NSDate+UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */; };
+		ABA91B841C55BFCE003D0CAB /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B831C55BFCE003D0CAB /* TestView.swift */; };
+		ABA91B861C55BFD9003D0CAB /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA91B851C55BFD9003D0CAB /* TestView.xib */; };
+		ABA91B881C55C002003D0CAB /* UIView+UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B871C55C002003D0CAB /* UIView+UtilsTest.swift */; };
 		ABB8667F1C501DD200E7C8D0 /* NSDate+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB866761C501DD200E7C8D0 /* NSDate+Utils.swift */; };
 		ABB866801C501DD200E7C8D0 /* NSObject+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB866771C501DD200E7C8D0 /* NSObject+Utils.swift */; };
 		ABB866811C501DD200E7C8D0 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB866791C501DD200E7C8D0 /* Operators.swift */; };
@@ -18,7 +24,7 @@
 		ABEA31A71C4ECAD200C386C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31A51C4ECAD200C386C1 /* Main.storyboard */; };
 		ABEA31A91C4ECAD200C386C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31A81C4ECAD200C386C1 /* Assets.xcassets */; };
 		ABEA31AC1C4ECAD200C386C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31AA1C4ECAD200C386C1 /* LaunchScreen.storyboard */; };
-		ABEA31B71C4ECAD200C386C1 /* SwiftUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31B61C4ECAD200C386C1 /* SwiftUtilsTests.swift */; };
+		ABEA31B71C4ECAD200C386C1 /* SwiftyHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */; };
 		ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */; };
 		ABEA31D51C4ECC2100C386C1 /* FrameHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+UtilsTest.swift"; sourceTree = "<group>"; };
+		ABA91B831C55BFCE003D0CAB /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		ABA91B851C55BFD9003D0CAB /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		ABA91B871C55C002003D0CAB /* UIView+UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UtilsTest.swift"; sourceTree = "<group>"; };
 		ABB866761C501DD200E7C8D0 /* NSDate+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utils.swift"; sourceTree = "<group>"; };
 		ABB866771C501DD200E7C8D0 /* NSObject+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Utils.swift"; sourceTree = "<group>"; };
 		ABB866791C501DD200E7C8D0 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
@@ -48,7 +60,7 @@
 		ABEA31AB1C4ECAD200C386C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABEA31AD1C4ECAD200C386C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABEA31B21C4ECAD200C386C1 /* SwiftyHelpersTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyHelpersTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABEA31B61C4ECAD200C386C1 /* SwiftUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtilsTests.swift; sourceTree = "<group>"; };
+		ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyHelpersTest.swift; sourceTree = "<group>"; };
 		ABEA31B81C4ECAD200C386C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+RegisterCellTest.swift"; sourceTree = "<group>"; };
 		ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameHelpersTest.swift; sourceTree = "<group>"; };
@@ -72,6 +84,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABA91B701C55B07C003D0CAB /* CellTest */ = {
+			isa = PBXGroup;
+			children = (
+				ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */,
+				ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */,
+			);
+			path = CellTest;
+			sourceTree = "<group>";
+		};
+		ABA91B7F1C55B7E4003D0CAB /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		ABA91B821C55BFBD003D0CAB /* ViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				ABA91B831C55BFCE003D0CAB /* TestView.swift */,
+				ABA91B851C55BFD9003D0CAB /* TestView.xib */,
+			);
+			path = ViewTest;
+			sourceTree = "<group>";
+		};
 		ABB866741C501DD200E7C8D0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,26 +190,22 @@
 		ABEA31B51C4ECAD200C386C1 /* SwiftyHelpersTest */ = {
 			isa = PBXGroup;
 			children = (
-				ABEA31CB1C4ECC2100C386C1 /* Foundation */,
+				ABA91B7F1C55B7E4003D0CAB /* Foundation */,
 				ABEA31CC1C4ECC2100C386C1 /* UIKit */,
 				ABEA31CF1C4ECC2100C386C1 /* Utils */,
-				ABEA31B61C4ECAD200C386C1 /* SwiftUtilsTests.swift */,
+				ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */,
 				ABEA31B81C4ECAD200C386C1 /* Info.plist */,
 			);
 			path = SwiftyHelpersTest;
 			sourceTree = "<group>";
 		};
-		ABEA31CB1C4ECC2100C386C1 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
 		ABEA31CC1C4ECC2100C386C1 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				ABA91B821C55BFBD003D0CAB /* ViewTest */,
+				ABA91B701C55B07C003D0CAB /* CellTest */,
 				ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */,
+				ABA91B871C55C002003D0CAB /* UIView+UtilsTest.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -275,6 +309,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA91B861C55BFD9003D0CAB /* TestView.xib in Resources */,
+				ABA91B761C55B0AC003D0CAB /* TestTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +336,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABEA31B71C4ECAD200C386C1 /* SwiftUtilsTests.swift in Sources */,
+				ABA91B841C55BFCE003D0CAB /* TestView.swift in Sources */,
+				ABEA31B71C4ECAD200C386C1 /* SwiftyHelpersTest.swift in Sources */,
+				ABA91B811C55B812003D0CAB /* NSDate+UtilsTest.swift in Sources */,
+				ABA91B881C55C002003D0CAB /* UIView+UtilsTest.swift in Sources */,
+				ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */,
 				ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */,
 				ABEA31D51C4ECC2100C386C1 /* FrameHelpersTest.swift in Sources */,
 			);
@@ -427,7 +467,7 @@
 				INFOPLIST_FILE = SwiftyHelpers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -440,7 +480,7 @@
 				INFOPLIST_FILE = SwiftyHelpers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftUtils;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -453,7 +493,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyHelpers.app/SwiftyHelpersTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyHelpers.app/SwiftyHelpers";
 			};
 			name = Debug;
 		};
@@ -465,7 +505,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyHelpers.app/SwiftyHelpersTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyHelpers.app/SwiftyHelpers";
 			};
 			name = Release;
 		};

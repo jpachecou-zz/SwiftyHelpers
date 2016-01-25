@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SwiftUtils
+@testable import SwiftyHelpers
 
 class FrameHelpersTest: XCTestCase {
     

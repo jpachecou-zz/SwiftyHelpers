@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import SwiftUtils
+@testable import SwiftyHelpers
 
-class SwiftUtilsTests: XCTestCase {
+class SwiftyHelpersTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
