@@ -16,7 +16,7 @@ import Foundation
  
  - returns: New date
  */
-func +(date: NSDate, days: Int) -> NSDate {
+public func +(date: NSDate, days: Int) -> NSDate {
     if days == 0 { return date }
     let gregorian = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
     // now build a NSDate object for the next day
@@ -37,12 +37,12 @@ func +(date: NSDate, days: Int) -> NSDate {
  
  - returns: New date
  */
-func -(date: NSDate, days: Int) -> NSDate? {
+public func -(date: NSDate, days: Int) -> NSDate? {
     return date + (days * -1)
 }
 
 /**
- Checks if a date is within a range of two rhs
+ Checks if a date is within a range of two dates
  
  ```
  if date <=> (lhs, rhs) {
@@ -55,8 +55,20 @@ func -(date: NSDate, days: Int) -> NSDate? {
  
  - returns: If date is within range
  */
-func <=>(date: NSDate, tuple:(start: NSDate, end: NSDate)) -> Bool {
+public func <=>(date: NSDate, tuple:(start: NSDate, end: NSDate)) -> Bool {
     return date >= tuple.start && date <= tuple.end
+}
+
+/**
+ Checks if date of left is equals that date of right
+ 
+ - parameter lhs: Left date
+ - parameter rhs: Right date
+ 
+ - returns: If date of left is equals
+ */
+public func ==(lhs: NSDate, rhs: NSDate) -> Bool {
+    return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: == )
 }
 
 /**
@@ -67,7 +79,7 @@ func <=>(date: NSDate, tuple:(start: NSDate, end: NSDate)) -> Bool {
  
  - returns: If date of left is greater than or equals
  */
-func >=(lhs: NSDate, rhs: NSDate) -> Bool {
+public func >=(lhs: NSDate, rhs: NSDate) -> Bool {
     return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: >= )
 }
 
@@ -79,7 +91,7 @@ func >=(lhs: NSDate, rhs: NSDate) -> Bool {
  
  - returns: If date of left is greater than or equals
  */
-func <=(lhs: NSDate, rhs: NSDate) -> Bool {
+public func <=(lhs: NSDate, rhs: NSDate) -> Bool {
     return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: <= )
 }
 
@@ -91,7 +103,7 @@ func <=(lhs: NSDate, rhs: NSDate) -> Bool {
  
  - returns: If date of left is greater than
  */
-func >(lhs: NSDate, rhs: NSDate) -> Bool {
+public func >(lhs: NSDate, rhs: NSDate) -> Bool {
     return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: > )
 }
 
@@ -103,7 +115,7 @@ func >(lhs: NSDate, rhs: NSDate) -> Bool {
  
  - returns: If date of left is less than
  */
-func <(lhs: NSDate, rhs: NSDate) -> Bool {
+public func <(lhs: NSDate, rhs: NSDate) -> Bool {
     return evaluateComponent(lhs.timeIntervalSince1970, rhs.timeIntervalSince1970, useOperator: < )
 }
 

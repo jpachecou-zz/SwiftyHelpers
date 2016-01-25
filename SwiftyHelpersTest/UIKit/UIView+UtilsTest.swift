@@ -59,4 +59,13 @@ class UIView_UtilsTest: XCTestCase {
         XCTAssertNotNil(findView, "fooView no found")
     }
     
+    func testLoadCustomView() {
+        guard let testView: TestView = loadCustomView() else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssertTrue(testView.classForCoder is TestView.Type, "testView need TestView Type")
+        XCTAssertNotNil(testView, "testView cannot be nil")
+    }
+    
 }

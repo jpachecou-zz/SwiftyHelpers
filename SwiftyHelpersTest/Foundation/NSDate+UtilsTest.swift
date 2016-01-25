@@ -30,12 +30,12 @@ class NSDate_UtilsTest: XCTestCase {
     
     func testAddDayToDate() {
         let dateTest = testDate_1_1_2016 + 1
+        
         XCTAssertEqual(dateTest, testDate_2_1_2016, "Adds day to date failed")
         
         let dateFailTest = testDate_1_1_2016 + 1
         XCTAssertNotEqual(dateFailTest, testDate_31_12_2015, "Adds day to date failed")
     }
-    
     
     func testSubtractDayToDate() {
         let dateTest = testDate_1_1_2016 - 1
@@ -43,6 +43,11 @@ class NSDate_UtilsTest: XCTestCase {
         
         let dateFailTest = testDate_1_1_2016 - 1
         XCTAssertNotEqual(dateFailTest, testDate_2_1_2016, "Adds day to date failed")
+    }
+    
+    func testEqualsDate() {
+        XCTAssertTrue(testDate_1_1_2016 == testDate_1_1_2016)
+        XCTAssertFalse(testDate_2_1_2016 == testDate_3_1_2016)
     }
     
     func testLessThanOrEquals() {
