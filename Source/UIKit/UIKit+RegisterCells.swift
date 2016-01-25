@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UITableViewCell {
+extension UITableViewCell {
     
     private static func registerCellInTableView(tableView: UITableView) {
         let nib = UINib(nibName: self.identifier, bundle: nil)
@@ -16,7 +16,7 @@ public extension UITableViewCell {
     }
 }
 
-public extension UICollectionViewCell {
+extension UICollectionViewCell {
     
     private static func registerCellInCollectionView(collectionView: UICollectionView) {
         let nib = UINib(nibName: self.identifier, bundle: nil)
@@ -34,8 +34,8 @@ public extension UITableView {
      
      - returns: Registered cell
      */
-    public func cellForClass(cellClass: AnyClass) -> UITableViewCell? {
-        return self.dequeueReusableCellWithIdentifier(identifierFromClass(cellClass))
+    public func cellForClass<T: UITableViewCell>() -> T {
+        return self.dequeueReusableCellWithIdentifier(identifierFromClass(T.self)) as! T
     }
     
 }
@@ -50,8 +50,8 @@ public extension UICollectionView {
      
      - returns: Registered cell
      */
-    public func cellForClass(cellClass: AnyClass, indexPath: NSIndexPath) -> UICollectionViewCell? {
-        return self.dequeueReusableCellWithReuseIdentifier(identifierFromClass(cellClass), forIndexPath: indexPath)
+    public func cellForClass<T: UICollectionViewCell>(indexPath: NSIndexPath) -> T {
+        return self.dequeueReusableCellWithReuseIdentifier(identifierFromClass(T.self), forIndexPath: indexPath) as! T
     }
     
 }
@@ -60,16 +60,15 @@ public extension UICollectionView {
  Register cell in tableview, the identifier is same that the class name
  
  Register cell:
-  - `self.tableView <= UITableViewCell.self`
+  - `self.tableView <= CustomTableViewCell.self`
  
  Obtain cell of tableView
-  - `let cell = tableView.cellForClass(UITableViewCell.self)`
+  - `let cell: CustomTableViewCell = tableView.cellForClass()`
  
  - parameter tableView: Tableview to register
  - parameter anyClass:  Class of cell to register
  */
-public func <=(tableView: UITableView, anyClass: AnyClass) {
-    guard let cellClass = anyClass as? UITableViewCell.Type else { return }
+public func <=<T: UITableViewCell>(tableView: UITableView, cellClass: T.Type) {
     cellClass.registerCellInTableView(tableView)
 }
 
@@ -77,15 +76,14 @@ public func <=(tableView: UITableView, anyClass: AnyClass) {
  Register cell in collectionView, the identifier is same that the class name
  
  Register cell:
- - `collectionView <= UICollectionViewCell.self`
+ - `collectionView <= CustomCollectionViewCell.self`
  
  Obtain cell of collectionView
- - `let cell = collectionView.cellForClass(UICollectionViewCell.self, indexPath: indexPath)`
+ - `let cell: CustomCollectionViewCell = collectionView.cellForClass(indexPath: indexPath)`
  
  - parameter collectionView: CollectionView to register
  - parameter anyClass:  Class of cell to register
  */
-public func <=(collectionView: UICollectionView, anyClass: AnyClass) {
-    guard let cellClass = anyClass as? UICollectionViewCell.Type else { return }
+public func <=<T: UICollectionViewCell>(collectionView: UICollectionView, cellClass: T.Type) {
     cellClass.registerCellInCollectionView(collectionView)
 }

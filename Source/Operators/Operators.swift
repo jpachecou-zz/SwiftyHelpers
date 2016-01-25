@@ -8,5 +8,12 @@
 
 import Foundation
 
+/**
+*  - Register cells
+*/
 infix operator <= { associativity left precedence 160 }
-prefix operator => {}
+/**
+*  Date between into two dates
+*/
+infix operator <=> { associativity left precedence 160 }
+

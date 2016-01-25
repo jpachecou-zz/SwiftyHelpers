@@ -10,6 +10,7 @@ import Foundation
 
 extension NSObject {
     
+    /// The identifier is some
     static var identifier: String {
         get { return identifierFromClass(self) }
     }
