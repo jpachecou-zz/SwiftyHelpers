@@ -140,8 +140,8 @@ First of all: if you are using Cocoapods, you just need to import `import Swifty
 		```
 		
 	- Removing recursively subViews from `UIView`, simply using the `removeAllSubViews`
-	
-	-Public method `getSubviewIntoView` is used recursively in order to get a specific subView, with a concrete class, inside of the `UIView` subviews.
+
+	- Public method `getSubviewIntoView` is used recursively in order to get a specific subView, with a concrete class, inside of the `UIView` subviews.
 	
 		```swift
 		let fooSubview: FooView = getSubviewIntoView(self.view)
@@ -149,7 +149,7 @@ First of all: if you are using Cocoapods, you just need to import `import Swifty
 		This line will locate the first FooView subview inside of all `UIView` array of subviews
 		
 
-	-Use `UIView` and `CGRect` extensions for the getter and setter of a frame attributes
+	- Use `UIView` and `CGRect` extensions for the getter and setter of a frame attributes
 	
 		```swift
 		let view = UIView()
@@ -167,7 +167,7 @@ First of all: if you are using Cocoapods, you just need to import `import Swifty
 	
 ## License
 
-SwiftyHelpers is licensed under the MIT-License. See LICENSE for more details.
+SwiftyHelpers is licensed under the MIT-License. See [LICENSE](https://github.com/jpachecou/SwiftyHelpers/blob/master/LICENSE.md) for more details.
 
 
 
