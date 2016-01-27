@@ -54,7 +54,7 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
 
 - Agregar o restar días a un `NSDate`
 
-  	```
+  	```swift
   	// Date: 1/1/2016 00:00:00
   	let testDate = NSDate(timeIntervalSince1970: 1451606400)
   	let addDate = testDate + 1
@@ -65,7 +65,7 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
   	```
 - Comprobar fechas `<`, `>`, `<=`, `>=`, `==`
   
-  	```
+  	```swift
   	// Date: 1/1/2016 00:00:00
  	let testDate = NSDate(timeIntervalSince1970: 1451606400)
   	if NSDate() > testDate {
@@ -74,7 +74,7 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
   	```
 - Comprobar si una fecha está dentro del rango de otras 2 fechas `<=>`
 
-  	```
+  	```swift
   	if NSDate() <=> (lessThanDate, greaterThanDate) {
   		// Checks if a date is within a range of two dates
   	}
@@ -86,7 +86,7 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
 
 	- Para que esto funcione se necesita que haya una celda en un `.xib` con el mismo nombre de la clase que hereda de la celda, en el caso de la tabla por ejemplo:
 	
-	```
+	```swift
 	class FooTableViewCell: UITableViewCell {}
 	class FooCollectionViewCell: UICollectionViewCell {}
 	/*
@@ -98,7 +98,7 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
 	```
 	Cuando esté listo la clase y el `.xib`, para registrar celdas en un `UITableView` o en un `UICollectionView` se puede usar el operador `<=`, funciona entre la tabla o colleción y el tipo de celda:
 	
-	```
+	```swift
 	self.tableView <= FooTableViewCell.self
 	self.collectionView <= FooCollectionViewCell.self
 	```
@@ -107,7 +107,7 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
 	
 	- Ejemplo de tabla:
 	
-		```
+		```swift
 		func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 	   		let cell: FooTableViewCell = tableView.cellForClass()
 	   		// configure cell
@@ -116,7 +116,7 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
 		```
 	- Ejemplo colección:
 	
-		```
+		```swift
 	    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 	        let cell: FooCollectionViewCell = collectionView.cellForClass(indexPath)
 	        // Configure cell
@@ -127,7 +127,7 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
 
 	- Para cargar cualquier nib, es necesario que se cumpla con la condición de que la clase que hereda de `UIView` tenga el mismo nombre que el `.xib` para instanciarlo.
 	
-		```
+		```swift
 		class FooView: UIView {} 
 		/*
 			+-- FooView.swift
@@ -141,14 +141,14 @@ Si usas SwiftyHelpers con CocoaPods necesitas importar el módulo `import Swifty
 	
 	-  El método público `getSubviewIntoView` se utiliza para buscar un subview de una clase especifica dentro de las subvistas recursivamente de un `UIView`
 	
-		```
+		```swift
 		let fooSubview: FooView = getSubviewIntoView(self.view)
 		```
 		Esté código encontrará la primera subvista que sea del tipo FooView dentro todas las susvistas de `UIView`
 
 	- Con las extenciones de `UIView` y `CGRect` podemos acceder y setear a los atributos del frame de una vista directamente
 	
-		```
+		```swift
 		let view = UIView()
 		// Setters and getters
 		view.frame.x = 12

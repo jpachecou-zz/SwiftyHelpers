@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSObject {
+public extension NSObject {
     
     /// The identifier is some
     static var identifier: String {
