@@ -11,7 +11,7 @@ import Foundation
 public extension NSObject {
     
     /// The identifier is some
-    static var identifier: String {
+    public static var identifier: String {
         get { return identifierFromClass(self) }
     }
     
