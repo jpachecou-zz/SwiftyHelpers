@@ -45,7 +45,7 @@ Find a folder named Source and drag onto your project
 
 
 ## How to use SwiftyHelpers
-First of all: if you are using Cocoapods, you just need to import `import SwiftyHelpers` module.
+First of all: if you are using CocoaPods, you just need to import `import SwiftyHelpers` module.
 
 
 
