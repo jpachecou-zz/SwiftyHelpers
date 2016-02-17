@@ -12,7 +12,7 @@ SwiftHelpers is focused on making simpler the most tedious and repeating tasks w
 ## Requirements
 
 - iOS 8.0+
-- XCode 7.2+
+- Xcode 7.2+
 
 ## Installation guide
 > Dynamic libraries or those made with Swift, require iOS 8.0+
