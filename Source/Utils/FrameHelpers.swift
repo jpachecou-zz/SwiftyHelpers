@@ -8,66 +8,73 @@
 
 import UIKit
 
-extension CGRect {
+public extension CGRect {
     
-    var width: CGFloat {
+    public var width: CGFloat {
         get { return CGRectGetWidth(self) }
         set { self.size.width = newValue }
     }
     
-    var height: CGFloat {
+    public var height: CGFloat {
         get { return CGRectGetHeight(self) }
         set { self.size.height = newValue }
     }
     
-    var x: CGFloat {
+    public var x: CGFloat {
         get { return CGRectGetMinX(self) }
         set { self.origin.x = newValue }
     }
     
-    var y: CGFloat {
+    public var y: CGFloat {
         get { return CGRectGetMinY(self) }
         set { self.origin.y = newValue }
     }
     
 }
 
-extension UIView {
+public extension UIView {
     
-    var width: CGFloat {
+    public var width: CGFloat {
         get { return self.bounds.width }
         set { self.frame.width = newValue }
     }
     
-    var height: CGFloat {
+    public var height: CGFloat {
         get { return self.bounds.height }
         set { self.frame.height = newValue }
     }
     
-    var x: CGFloat {
+    public var x: CGFloat {
         get { return self.frame.x }
         set { self.frame.x = newValue }
     }
     
-    var y: CGFloat {
+    public var y: CGFloat {
         get { return self.frame.y }
         set { self.frame.y = newValue }
     }
     
-    var minX: CGFloat {
-        get { return self.frame.midX }
+    public var minX: CGFloat {
+        get { return self.frame.minX }
     }
     
-    var midY: CGFloat {
+    public var minY: CGFloat {
+        get { return self.frame.minY }
+    }
+    
+    public var midY: CGFloat {
         get { return self.frame.midY }
     }
     
+    public var midX: CGFloat {
+        get { return self.frame.midX }
+    }
     
-    var maxX: CGFloat {
+    public var maxX: CGFloat {
         get { return self.frame.maxX }
     }
     
-    var maxY: CGFloat {
+    public var maxY: CGFloat {
         get { return self.frame.maxY }
     }
     
