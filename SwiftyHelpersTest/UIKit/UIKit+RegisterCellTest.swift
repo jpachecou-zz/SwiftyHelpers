@@ -11,8 +11,11 @@ import XCTest
 
 class UIKit_RegisterCellTest: XCTestCase {
     
+    private let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+    
     override func setUp() {
         super.setUp()
+        
     }
     
     override func tearDown() {
@@ -28,5 +31,31 @@ class UIKit_RegisterCellTest: XCTestCase {
         let cell: TestTableViewCell = tableView.cellForClass()
         XCTAssertNotNil(cell, "Cell register cannot be nil")
     }
+    
+    func testRegisterCollectionViewCell() {
+        let flowLayout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: CGRectMake(0, 0, 100, 100), collectionViewLayout: flowLayout)
+        collectionView.dataSource = self
+        
+        collectionView <= TestCollectionViewCell.self
+        let cell: TestCollectionViewCell = collectionView.cellForClass(self.indexPath)
+        XCTAssertNotNil(cell, "Cell register cannot be nil")
+    }
 
+}
+
+extension UIKit_RegisterCellTest: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
 }

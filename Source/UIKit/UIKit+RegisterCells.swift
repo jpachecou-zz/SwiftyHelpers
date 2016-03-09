@@ -8,22 +8,29 @@
 
 import UIKit
 
-extension UITableViewCell {
+internal extension UITableViewCell {
     
-    private static func registerCellInTableView(tableView: UITableView) {
+    static func registerCellInTableView(tableView: UITableView) {
         let nib = UINib(nibName: self.identifier, bundle: NSBundle(forClass: self))
         tableView.registerNib(nib, forCellReuseIdentifier: self.identifier)
     }
 }
 
-extension UICollectionViewCell {
+internal extension UICollectionViewCell {
     
-    private static func registerCellInCollectionView(collectionView: UICollectionView) {
+    static func registerCellInCollectionView(collectionView: UICollectionView) {
         let nib = UINib(nibName: self.identifier, bundle: NSBundle(forClass: self))
         collectionView.registerNib(nib, forCellWithReuseIdentifier: self.identifier)
-    }    
+    }
 }
 
+internal extension UICollectionReusableView {
+    
+    static func registerReusableViewInCollectionView(collectionView: UICollectionView, kind: String) {
+        let nib = UINib(nibName: self.identifier, bundle: NSBundle(forClass: self))
+        collectionView.registerNib(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: self.identifier)
+    }
+}
 
 public extension UITableView {
     
@@ -35,7 +42,7 @@ public extension UITableView {
      - returns: Registered cell
      */
     public func cellForClass<T: UITableViewCell>() -> T {
-        return self.dequeueReusableCellWithIdentifier(identifierFromClass(T.self)) as! T
+        return self.dequeueReusableCellWithIdentifier(T.self.identifier) as! T
     }
     
 }
@@ -51,9 +58,20 @@ public extension UICollectionView {
      - returns: Registered cell
      */
     public func cellForClass<T: UICollectionViewCell>(indexPath: NSIndexPath) -> T {
-        return self.dequeueReusableCellWithReuseIdentifier(identifierFromClass(T.self), forIndexPath: indexPath) as! T
+        return self.dequeueReusableCellWithReuseIdentifier(T.self.identifier, forIndexPath: indexPath) as! T
     }
     
+    /**
+     Obtains the cell registered in the collectionView
+     
+     - parameter indexPath: IndexPath of reusable view
+     - parameter kind:      UICollectionElementKindSectionHeader - UICollectionElementKindSectionFooter
+     
+     - returns: Registered reusable view
+     */
+    public func supplementaryViewForClass<T: UICollectionReusableView>(indexPath: NSIndexPath, kind: String) -> T {
+        return self.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: T.self.identifier, forIndexPath: indexPath) as! T
+    }
 }
 
 /**
@@ -76,7 +94,7 @@ public func <=<T: UITableViewCell>(tableView: UITableView, cellClass: T.Type) {
  Register cell in collectionView, the identifier is same that the class name
  
  Register cell:
- - `collectionView <= CustomCollectionViewCell.self`
+ - `self.collectionView <= CustomCollectionViewCell.self`
  
  Obtain cell of collectionView
  - `let cell: CustomCollectionViewCell = collectionView.cellForClass(indexPath: indexPath)`
@@ -86,4 +104,21 @@ public func <=<T: UITableViewCell>(tableView: UITableView, cellClass: T.Type) {
  */
 public func <=<T: UICollectionViewCell>(collectionView: UICollectionView, cellClass: T.Type) {
     cellClass.registerCellInCollectionView(collectionView)
+}
+
+
+/**
+ Register reusableview in collectionView, the identifier is same that the class name
+ 
+ Register reusable view:
+ - `self.collectionView <= (CustomCollectionReusableView.self, UICollectionElementKindSectionHeader)`
+ 
+ Obtain cell of collectionView
+ - `let view: CustomCollectionReusableView = collectionView.supplementaryViewForClass(indexPath: indexPath, kind: UICollectionElementKindSectionHeader)`
+ 
+ - parameter collectionView: CollectionView to register
+ - parameter cellClass: Class of cell to register and kind identifier
+ */
+public func <=<T: UICollectionReusableView>(collectionView: UICollectionView, cellClass: (T.Type, String)) {
+    cellClass.0.registerReusableViewInCollectionView(collectionView, kind: cellClass.1)
 }

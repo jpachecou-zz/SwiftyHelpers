@@ -32,10 +32,8 @@ public extension UIView {
  - returns: First elemend find of the genericType
  */
 public func getSubviewIntoView<T: UIView>(intoView: UIView) -> T? {
-    print("IntoView count subviews: \(intoView.subviews.count)")
     for view in intoView.subviews {
         if view.classForCoder is T.Type {
-            print("Found: \(view) is \(T.self)")
             return view as? T
         }
         if let view: T = getSubviewIntoView(view) {
