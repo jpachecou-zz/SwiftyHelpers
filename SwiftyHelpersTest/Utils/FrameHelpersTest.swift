@@ -10,22 +10,20 @@ import XCTest
 @testable import SwiftyHelpers
 
 class FrameHelpersTest: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
 
     func testPutFrame() {
-        var frame = CGRectZero
-        frame.width = 80
-        frame.height = 100
+        var frame = CGRect(x: 0, y: 0, width: 80, height: 100)
         frame.x = 50
         frame.y = 25
-        
+
         XCTAssertEqual(CGRectGetWidth(frame), 80.0)
         XCTAssertEqual(CGRectGetHeight(frame), 100.0)
         XCTAssertEqual(CGRectGetMinX(frame), 50.0)
@@ -35,14 +33,14 @@ class FrameHelpersTest: XCTestCase {
         XCTAssertEqual(CGRectGetMidY(frame), 75.0)
         XCTAssertEqual(CGRectGetMaxY(frame), 125.0)
     }
-    
+
     func testFrameInView() {
         let view = UIView()
         view.width = 80
         view.height = 100
         view.x = 50
         view.y = 25
-        
+
         XCTAssertEqual(CGRectGetWidth(view.frame), 80.0)
         XCTAssertEqual(CGRectGetHeight(view.frame), 100.0)
         XCTAssertEqual(CGRectGetMinX(view.frame), 50.0)
