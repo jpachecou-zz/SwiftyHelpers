@@ -72,6 +72,28 @@ public extension UICollectionView {
     public func supplementaryViewForClass<T: UICollectionReusableView>(indexPath: NSIndexPath, kind: String) -> T {
         return self.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: T.self.identifier, forIndexPath: indexPath) as! T
     }
+
+    /**
+     Obtains the header registered in the collectionView
+
+     - parameter indexPath: IndexPath of reusable view
+
+     - returns: Registered header reusable view
+     */
+    public func headerForClass<T: UICollectionReusableView>(indexPath: NSIndexPath) -> T {
+        return self.supplementaryViewForClass(indexPath, kind: UICollectionElementKindSectionHeader)
+    }
+
+    /**
+     Obtains the footer registered in the collectionView
+
+     - parameter indexPath: IndexPath of reusable view
+
+     - returns: Registered footer reusable view
+     */
+    public func footerForClass<T: UICollectionReusableView>(indexPath: NSIndexPath) -> T {
+        return self.supplementaryViewForClass(indexPath, kind: UICollectionElementKindSectionFooter)
+    }
 }
 
 /**

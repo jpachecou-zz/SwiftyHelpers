@@ -36,16 +36,21 @@ class UIKit_RegisterCellTest: XCTestCase {
         let flowLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: CGRectMake(0, 0, 100, 100), collectionViewLayout: flowLayout)
         collectionView.dataSource = self
+        flowLayout.headerReferenceSize = CGSizeMake(300, 200)
         
         collectionView <= TestCollectionViewCell.self
+        collectionView <= (TestCollectionReusableView.self, UICollectionElementKindSectionHeader)
+        
         let cell: TestCollectionViewCell = collectionView.cellForClass(self.indexPath)
+        let header: TestCollectionReusableView = collectionView.headerForClass(indexPath)
         XCTAssertNotNil(cell, "Cell register cannot be nil")
+        XCTAssertNotNil(header, "Header register cannot be nil")
     }
 
 }
 
 extension UIKit_RegisterCellTest: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -57,5 +62,13 @@ extension UIKit_RegisterCellTest: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
     }
-    
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: 100, height: 40)
+    }
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: 100, height: 40)
+    }
+
 }
