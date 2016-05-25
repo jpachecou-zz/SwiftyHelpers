@@ -103,6 +103,8 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 	```swift
 	self.tableView <= FooTableViewCell.self
 	self.collectionView <= FooCollectionViewCell.self
+	collectionView <= (HeaderCollectionReusableView.self, UICollectionElementKindSectionHeader)
+   collectionView <= (FooterCollectionReusableView.self, UICollectionElementKindSectionFooter)
 	```
 		
 	In order to obtain registered cells, just declare an instance of it with its class:
@@ -124,6 +126,22 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 	        // Configure cell
 	        return cell
 	    }
+		```
+	- Register header or footer in collection view example:
+		
+		```swift
+        func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        	if kind == UICollectionElementKindSectionHeader {
+            	let hedader: HeaderCollectionReusableView = collectionView.supplementaryViewForClass(indexPath, kind: kind)
+            	// or
+            	let hedader: HeaderCollectionReusableView = headerForClass(indexPath)
+            	// Configure hedaer
+            	return hedader
+        	}
+        	let footer: FooterCollectionReusableView = footerForClass(indexPath)
+        	// Configure footer
+        	return footer
+    	 }
 		```
 - **`UIView`**
 
