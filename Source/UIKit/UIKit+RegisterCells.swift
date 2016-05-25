@@ -8,51 +8,52 @@
 
 import UIKit
 
-internal extension UITableViewCell {
-    
-    static func registerCellInTableView(tableView: UITableView) {
-        let nib = UINib(nibName: self.identifier, bundle: NSBundle(forClass: self))
-        tableView.registerNib(nib, forCellReuseIdentifier: self.identifier)
-    }
-}
-
-internal extension UICollectionViewCell {
-    
-    static func registerCellInCollectionView(collectionView: UICollectionView) {
-        let nib = UINib(nibName: self.identifier, bundle: NSBundle(forClass: self))
-        collectionView.registerNib(nib, forCellWithReuseIdentifier: self.identifier)
-    }
-}
-
-internal extension UICollectionReusableView {
-    
-    static func registerReusableViewInCollectionView(collectionView: UICollectionView, kind: String) {
-        let nib = UINib(nibName: self.identifier, bundle: NSBundle(forClass: self))
-        collectionView.registerNib(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: self.identifier)
-    }
-}
-
 public extension UITableView {
-    
+
+    internal func registerCellInTableView<T: UITableViewCell>(cellClass: T.Type) {
+        let nib = UINib(nibName: T.identifier, bundle: NSBundle(forClass: T.self))
+        self.registerNib(nib, forCellReuseIdentifier: T.identifier)
+    }
+
+    internal func registerHeaderFooterInTableView<T: UITableViewHeaderFooterView>(headerClass: T.Type) {
+        let nib = UINib(nibName: T.identifier, bundle: NSBundle(forClass: T.self))
+        self.registerNib(nib, forHeaderFooterViewReuseIdentifier: T.identifier)
+    }
+
     /**
      Obtains the cell registered in the tableView
-     
-     - parameter cellClass: Class to register in tableView ´TableViewCell.self´
      
      - returns: Registered cell
      */
     public func cellForClass<T: UITableViewCell>() -> T {
         return self.dequeueReusableCellWithIdentifier(T.self.identifier) as! T
     }
+
+    /**
+     Obtains the header registered in the tableView
+
+     - returns: Registered cell
+     */
+    public func headerFooterForClass<T: UITableViewHeaderFooterView>() -> T {
+        return self.dequeueReusableHeaderFooterViewWithIdentifier(T.self.identifier) as! T
+    }
     
 }
 
 public extension UICollectionView {
- 
+
+    internal func registerCellInCollectionView<T: UICollectionViewCell>(cellClass: T.Type) {
+        let nib = UINib(nibName: T.identifier, bundle: NSBundle(forClass: T.self))
+        self.registerNib(nib, forCellWithReuseIdentifier: T.identifier)
+    }
+
+    internal func registerReusableViewInCollectionView<T: UICollectionReusableView>(headerClass: T.Type, kind: String) {
+        let nib = UINib(nibName: T.identifier, bundle: NSBundle(forClass: T.self))
+        self.registerNib(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.identifier)
+    }
     /**
      Obtains the cell registered in the collectionView
-     
-     - parameter cellClass: Class to register in collectionView ´CollectionViewCell.self´
+
      - parameter indexPath: IndexPath of cell
      
      - returns: Registered cell
@@ -109,7 +110,23 @@ public extension UICollectionView {
  - parameter anyClass:  Class of cell to register
  */
 public func <=<T: UITableViewCell>(tableView: UITableView, cellClass: T.Type) {
-    cellClass.registerCellInTableView(tableView)
+    tableView.registerCellInTableView(cellClass)
+}
+
+/**
+ Register cell in tableview, the identifier is same that the class name
+
+ Register cell:
+ - `self.tableView <= CustomTableViewCell.self`
+
+ Obtain cell of tableView
+ - `let cell: CustomTableViewCell = tableView.cellForClass()`
+
+ - parameter tableView: Tableview to register
+ - parameter anyClass:  Class of cell to register
+ */
+public func <=<T: UITableViewHeaderFooterView>(tableView: UITableView, cellClass: T.Type) {
+    tableView.registerHeaderFooterInTableView(cellClass)
 }
 
 /**
@@ -125,7 +142,7 @@ public func <=<T: UITableViewCell>(tableView: UITableView, cellClass: T.Type) {
  - parameter anyClass:  Class of cell to register
  */
 public func <=<T: UICollectionViewCell>(collectionView: UICollectionView, cellClass: T.Type) {
-    cellClass.registerCellInCollectionView(collectionView)
+    collectionView.registerCellInCollectionView(cellClass)
 }
 
 
@@ -142,5 +159,5 @@ public func <=<T: UICollectionViewCell>(collectionView: UICollectionView, cellCl
  - parameter cellClass: Class of cell to register and kind identifier
  */
 public func <=<T: UICollectionReusableView>(collectionView: UICollectionView, cellClass: (T.Type, String)) {
-    cellClass.0.registerReusableViewInCollectionView(collectionView, kind: cellClass.1)
+    collectionView.registerReusableViewInCollectionView(cellClass.0, kind: cellClass.1)
 }
