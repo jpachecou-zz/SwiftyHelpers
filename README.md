@@ -132,11 +132,11 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 		```swift
         func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         	if kind == UICollectionElementKindSectionHeader {
-            	let hedader: HeaderCollectionReusableView = collectionView.supplementaryViewForClass(indexPath, kind: kind)
+            	let header: HeaderCollectionReusableView = collectionView.supplementaryViewForClass(indexPath, kind: kind)
             	// or
-            	let hedader: HeaderCollectionReusableView = headerForClass(indexPath)
+            	let header: HeaderCollectionReusableView = headerForClass(indexPath)
             	// Configure hedaer
-            	return hedader
+            	return header
         	}
         	let footer: FooterCollectionReusableView = footerForClass(indexPath)
         	// Configure footer
