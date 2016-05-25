@@ -26,7 +26,6 @@
 		ABEA31A21C4ECAD200C386C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */; };
 		ABEA31A41C4ECAD200C386C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31A31C4ECAD200C386C1 /* ViewController.swift */; };
 		ABEA31A71C4ECAD200C386C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31A51C4ECAD200C386C1 /* Main.storyboard */; };
-		ABEA31A91C4ECAD200C386C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31A81C4ECAD200C386C1 /* Assets.xcassets */; };
 		ABEA31AC1C4ECAD200C386C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31AA1C4ECAD200C386C1 /* LaunchScreen.storyboard */; };
 		ABEA31B71C4ECAD200C386C1 /* SwiftyHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */; };
 		ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */; };
@@ -64,7 +63,6 @@
 		ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEA31A31C4ECAD200C386C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABEA31A61C4ECAD200C386C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ABEA31A81C4ECAD200C386C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABEA31AB1C4ECAD200C386C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABEA31AD1C4ECAD200C386C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABEA31B21C4ECAD200C386C1 /* SwiftyHelpersTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyHelpersTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,7 +190,6 @@
 				ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */,
 				ABEA31A31C4ECAD200C386C1 /* ViewController.swift */,
 				ABEA31A51C4ECAD200C386C1 /* Main.storyboard */,
-				ABEA31A81C4ECAD200C386C1 /* Assets.xcassets */,
 				ABEA31AA1C4ECAD200C386C1 /* LaunchScreen.storyboard */,
 				ABEA31AD1C4ECAD200C386C1 /* Info.plist */,
 			);
@@ -312,7 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABEA31AC1C4ECAD200C386C1 /* LaunchScreen.storyboard in Resources */,
-				ABEA31A91C4ECAD200C386C1 /* Assets.xcassets in Resources */,
 				ABEA31A71C4ECAD200C386C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,8 +474,6 @@
 		ABEA31BC1C4ECAD200C386C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = SwiftyHelpers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -491,8 +485,6 @@
 		ABEA31BD1C4ECAD200C386C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = SwiftyHelpers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
