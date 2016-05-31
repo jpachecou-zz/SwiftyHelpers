@@ -11,6 +11,8 @@
 		AB206CC51C8FC0E8007BB330 /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB206CC31C8FC0E8007BB330 /* TestCollectionViewCell.xib */; };
 		AB206CC81C8FC0FA007BB330 /* TestCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB206CC61C8FC0FA007BB330 /* TestCollectionReusableView.swift */; };
 		AB206CC91C8FC0FA007BB330 /* TestCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB206CC71C8FC0FA007BB330 /* TestCollectionReusableView.xib */; };
+		AB4C05321CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C05301CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift */; };
+		AB4C05331CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4C05311CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib */; };
 		ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */; };
 		ABA91B761C55B0AC003D0CAB /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */; };
 		ABA91B811C55B812003D0CAB /* NSDate+UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */; };
@@ -23,8 +25,6 @@
 		ABB866821C501DD200E7C8D0 /* UIKit+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667B1C501DD200E7C8D0 /* UIKit+RegisterCells.swift */; };
 		ABB866831C501DD200E7C8D0 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667C1C501DD200E7C8D0 /* UIView+Utils.swift */; };
 		ABB866841C501DD200E7C8D0 /* FrameHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667E1C501DD200E7C8D0 /* FrameHelpers.swift */; };
-		ABE9A5791CF65891003AB782 /* TestTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE9A5771CF65891003AB782 /* TestTableViewHeaderFooterView.swift */; };
-		ABE9A5891CF66716003AB782 /* TestTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE9A5871CF66716003AB782 /* TestTableViewHeaderFooterView.xib */; };
 		ABEA31A21C4ECAD200C386C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */; };
 		ABEA31A41C4ECAD200C386C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31A31C4ECAD200C386C1 /* ViewController.swift */; };
 		ABEA31A71C4ECAD200C386C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31A51C4ECAD200C386C1 /* Main.storyboard */; };
@@ -49,6 +49,8 @@
 		AB206CC31C8FC0E8007BB330 /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
 		AB206CC61C8FC0FA007BB330 /* TestCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCollectionReusableView.swift; sourceTree = "<group>"; };
 		AB206CC71C8FC0FA007BB330 /* TestCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCollectionReusableView.xib; sourceTree = "<group>"; };
+		AB4C05301CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		AB4C05311CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
 		ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+UtilsTest.swift"; sourceTree = "<group>"; };
@@ -61,8 +63,6 @@
 		ABB8667B1C501DD200E7C8D0 /* UIKit+RegisterCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+RegisterCells.swift"; sourceTree = "<group>"; };
 		ABB8667C1C501DD200E7C8D0 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		ABB8667E1C501DD200E7C8D0 /* FrameHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameHelpers.swift; sourceTree = "<group>"; };
-		ABE9A5771CF65891003AB782 /* TestTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
-		ABE9A5871CF66716003AB782 /* TestTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
 		ABEA319E1C4ECAD200C386C1 /* SwiftyHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEA31A31C4ECAD200C386C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		ABA91B701C55B07C003D0CAB /* CellTest */ = {
 			isa = PBXGroup;
 			children = (
-				ABE9A5771CF65891003AB782 /* TestTableViewHeaderFooterView.swift */,
-				ABE9A5871CF66716003AB782 /* TestTableViewHeaderFooterView.xib */,
+				AB4C05301CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift */,
+				AB4C05311CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib */,
 				ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */,
 				ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */,
 				AB206CC21C8FC0E8007BB330 /* TestCollectionViewCell.swift */,
@@ -324,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABA91B861C55BFD9003D0CAB /* TestView.xib in Resources */,
-				ABE9A5891CF66716003AB782 /* TestTableViewHeaderFooterView.xib in Resources */,
+				AB4C05331CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib in Resources */,
 				AB206CC91C8FC0FA007BB330 /* TestCollectionReusableView.xib in Resources */,
 				ABA91B761C55B0AC003D0CAB /* TestTableViewCell.xib in Resources */,
 				AB206CC51C8FC0E8007BB330 /* TestCollectionViewCell.xib in Resources */,
@@ -357,7 +357,7 @@
 				ABEA31B71C4ECAD200C386C1 /* SwiftyHelpersTest.swift in Sources */,
 				ABA91B811C55B812003D0CAB /* NSDate+UtilsTest.swift in Sources */,
 				AB206CC81C8FC0FA007BB330 /* TestCollectionReusableView.swift in Sources */,
-				ABE9A5791CF65891003AB782 /* TestTableViewHeaderFooterView.swift in Sources */,
+				AB4C05321CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift in Sources */,
 				ABA91B881C55C002003D0CAB /* UIView+UtilsTest.swift in Sources */,
 				ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */,
 				ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */,
