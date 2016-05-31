@@ -3,8 +3,8 @@
 [![Build Status](https://travis-ci.org/jpachecou/SwiftyHelpers.svg?branch=master)](https://travis-ci.org/jpachecou/SwiftyHelpers)
 [![](https://cocoapod-badges.herokuapp.com/v/SwiftyHelpers/badge.png)](https://cocoapods.org/pods/SwiftyHelpers)
 ![](https://cocoapod-badges.herokuapp.com/p/SwiftyHelpers/badge.png)
-![](https://img.shields.io/badge/Swift-2.1-orange.svg)
-[![](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftyHelpers.svg)](http://cocoadocs.org/docsets/SwiftyHelpers/0.0.1/)
+![](https://img.shields.io/badge/Swift-2.2-orange.svg)
+[![](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftyHelpers.svg)](http://cocoadocs.org/docsets/SwiftyHelpers/0.1.2/)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jpachecou/SwiftyHelpers/blob/master/LICENSE.md)
 
 SwiftHelpers is focused on making simpler the most tedious and repeating tasks when it comes to developing in Swift
@@ -24,7 +24,7 @@ In order to install through [CocoaPods](http://cocoapods.org), just add this lin
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
-pod 'SwiftyHelpers', '~> 0.0.1'
+pod 'SwiftyHelpers', '~> 0.1.2'
 ```
 
 Next, excute in terminal 
@@ -90,26 +90,38 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 	
 	class FooTableViewCell: UITableViewCell {}
 	class FooCollectionViewCell: UICollectionViewCell {}
+	class FooTableHeaderView: UITableViewHeaderFooterView {}
+	class FooCollectionHeaderView: UICollectionReusableView {}
 	/*
 		+-- FooTableViewCell.swift
 		+-- FooTableViewCell.xib
 		+-- FooCollectionViewCell.swift
 		+-- FooCollectionViewCell.xib
+		+-- FooTableHeaderView.swift
+		+-- FooTableHeaderView.xib
+		+-- FooCollectionHeaderView.swift
+		+-- FooCollectionHeaderView.xib
 	*/
 	```
 	
 	As soon as class and `.xib` are ready, in order to register cells in a `UITableView` or `UICollectionView`, just invoke the `<=` operator among the tableView/collectionView and the cell.
 	
 	```swift
+	// Register cell in a table view
 	self.tableView <= FooTableViewCell.self
+	// Register header or footer in a table view
+	self.tableView <= FooTableHeaderView.self
+	
+	// Register cell in collection view
 	self.collectionView <= FooCollectionViewCell.self
+	// Register header or footer in collection view
 	collectionView <= (HeaderCollectionReusableView.self, UICollectionElementKindSectionHeader)
    collectionView <= (FooterCollectionReusableView.self, UICollectionElementKindSectionFooter)
 	```
 		
 	In order to obtain registered cells, just declare an instance of it with its class:
 	
-	- tableView example:
+	- Get cell of a tableView, example:
 	
 		```swift
 		func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -118,7 +130,16 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 	   		return cell
 	   }
 		```
-	- collectionView example:
+	- Get header or footer of a tableView, example:
+	
+		```swift
+		func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+	   		let cell: FooTableHeaderView = tableView.headerFooterForClass()
+	   		// configure cell
+	   		return cell
+	   }
+		```
+	- Get cell of a collectionView, example:
 	
 		```swift
 	    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -127,7 +148,7 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 	        return cell
 	    }
 		```
-	- Register header or footer in collection view example:
+	- Get header or footer of a collection view, example:
 		
 		```swift
         func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
@@ -181,7 +202,6 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 		view.midY
 		view.maxX
 		```
-	
 	
 ## License
 

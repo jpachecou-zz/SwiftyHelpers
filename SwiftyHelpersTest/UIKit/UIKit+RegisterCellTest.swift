@@ -27,9 +27,12 @@ class UIKit_RegisterCellTest: XCTestCase {
         
         let tableView = UITableView()
         tableView <= TestTableViewCell.self
+        tableView <= TestTableViewHeaderFooterView.self
         
         let cell: TestTableViewCell = tableView.cellForClass()
+        let header: TestTableViewHeaderFooterView = tableView.headerFooterForClass()
         XCTAssertNotNil(cell, "Cell register cannot be nil")
+        XCTAssertNotNil(header, "Header or Footer register cannot be nil")
     }
     
     func testRegisterCollectionViewCell() {
@@ -44,7 +47,7 @@ class UIKit_RegisterCellTest: XCTestCase {
         let cell: TestCollectionViewCell = collectionView.cellForClass(self.indexPath)
         let header: TestCollectionReusableView = collectionView.headerForClass(indexPath)
         XCTAssertNotNil(cell, "Cell register cannot be nil")
-        XCTAssertNotNil(header, "Header register cannot be nil")
+        XCTAssertNotNil(header, "Header or Footer register cannot be nil")
     }
 
 }

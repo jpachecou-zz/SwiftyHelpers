@@ -11,6 +11,8 @@
 		AB206CC51C8FC0E8007BB330 /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB206CC31C8FC0E8007BB330 /* TestCollectionViewCell.xib */; };
 		AB206CC81C8FC0FA007BB330 /* TestCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB206CC61C8FC0FA007BB330 /* TestCollectionReusableView.swift */; };
 		AB206CC91C8FC0FA007BB330 /* TestCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB206CC71C8FC0FA007BB330 /* TestCollectionReusableView.xib */; };
+		AB4C05321CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C05301CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift */; };
+		AB4C05331CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4C05311CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib */; };
 		ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */; };
 		ABA91B761C55B0AC003D0CAB /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */; };
 		ABA91B811C55B812003D0CAB /* NSDate+UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */; };
@@ -47,6 +49,8 @@
 		AB206CC31C8FC0E8007BB330 /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
 		AB206CC61C8FC0FA007BB330 /* TestCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCollectionReusableView.swift; sourceTree = "<group>"; };
 		AB206CC71C8FC0FA007BB330 /* TestCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCollectionReusableView.xib; sourceTree = "<group>"; };
+		AB4C05301CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		AB4C05311CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
 		ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+UtilsTest.swift"; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		ABA91B701C55B07C003D0CAB /* CellTest */ = {
 			isa = PBXGroup;
 			children = (
+				AB4C05301CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift */,
+				AB4C05311CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib */,
 				ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */,
 				ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */,
 				AB206CC21C8FC0E8007BB330 /* TestCollectionViewCell.swift */,
@@ -318,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABA91B861C55BFD9003D0CAB /* TestView.xib in Resources */,
+				AB4C05331CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib in Resources */,
 				AB206CC91C8FC0FA007BB330 /* TestCollectionReusableView.xib in Resources */,
 				ABA91B761C55B0AC003D0CAB /* TestTableViewCell.xib in Resources */,
 				AB206CC51C8FC0E8007BB330 /* TestCollectionViewCell.xib in Resources */,
@@ -350,6 +357,7 @@
 				ABEA31B71C4ECAD200C386C1 /* SwiftyHelpersTest.swift in Sources */,
 				ABA91B811C55B812003D0CAB /* NSDate+UtilsTest.swift in Sources */,
 				AB206CC81C8FC0FA007BB330 /* TestCollectionReusableView.swift in Sources */,
+				AB4C05321CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift in Sources */,
 				ABA91B881C55C002003D0CAB /* UIView+UtilsTest.swift in Sources */,
 				ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */,
 				ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */,
