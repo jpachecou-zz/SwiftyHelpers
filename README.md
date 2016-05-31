@@ -24,7 +24,7 @@ In order to install through [CocoaPods](http://cocoapods.org), just add this lin
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
-pod 'SwiftyHelpers', '~> 0.0.1'
+pod 'SwiftyHelpers', '~> 0.1.2'
 ```
 
 Next, excute in terminal 
@@ -202,10 +202,6 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 		view.midY
 		view.maxX
 		```
-	
-## Contribution Guide
-	
-
 	
 ## License
 
