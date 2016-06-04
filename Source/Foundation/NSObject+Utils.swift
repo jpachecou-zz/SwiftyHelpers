@@ -8,16 +8,18 @@
 
 import Foundation
 
-public extension NSObject {
-    
+public protocol Identificable: AnyObject {}
+
+extension Identificable {
     /// The identifier is some
     public static var identifier: String {
-        get { return identifierFromClass(self) }
+        get { return _id(Self.self) }
     }
-    
 }
 
-internal func identifierFromClass(objectClass: AnyClass) -> String {
+extension NSObject: Identificable {}
+
+internal func _id<T: AnyObject>(objectClass: T.Type) -> String {
     let name = NSStringFromClass(objectClass)
     let components = name.componentsSeparatedByString(".")
     if components.count > 1 {
