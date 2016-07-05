@@ -11,7 +11,7 @@ import XCTest
 
 class UIKit_RegisterCellTest: XCTestCase {
     
-    private let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+    private let indexPath = IndexPath(row: 0, section: 0)
     
     override func setUp() {
         super.setUp()
@@ -37,9 +37,9 @@ class UIKit_RegisterCellTest: XCTestCase {
     
     func testRegisterCollectionViewCell() {
         let flowLayout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: CGRectMake(0, 0, 100, 100), collectionViewLayout: flowLayout)
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), collectionViewLayout: flowLayout)
         collectionView.dataSource = self
-        flowLayout.headerReferenceSize = CGSizeMake(300, 200)
+        flowLayout.headerReferenceSize = CGSize(width: 300, height: 200)
         
         collectionView <= TestCollectionViewCell.self
         collectionView <= (TestCollectionReusableView.self, UICollectionElementKindSectionHeader)
@@ -54,23 +54,23 @@ class UIKit_RegisterCellTest: XCTestCase {
 
 extension UIKit_RegisterCellTest: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 40)
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: 100, height: 40)
     }
 

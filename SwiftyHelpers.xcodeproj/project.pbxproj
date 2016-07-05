@@ -24,14 +24,12 @@
 		ABB866811C501DD200E7C8D0 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB866791C501DD200E7C8D0 /* Operators.swift */; };
 		ABB866821C501DD200E7C8D0 /* UIKit+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667B1C501DD200E7C8D0 /* UIKit+RegisterCells.swift */; };
 		ABB866831C501DD200E7C8D0 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667C1C501DD200E7C8D0 /* UIView+Utils.swift */; };
-		ABB866841C501DD200E7C8D0 /* FrameHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667E1C501DD200E7C8D0 /* FrameHelpers.swift */; };
 		ABEA31A21C4ECAD200C386C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */; };
 		ABEA31A41C4ECAD200C386C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31A31C4ECAD200C386C1 /* ViewController.swift */; };
 		ABEA31A71C4ECAD200C386C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31A51C4ECAD200C386C1 /* Main.storyboard */; };
 		ABEA31AC1C4ECAD200C386C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31AA1C4ECAD200C386C1 /* LaunchScreen.storyboard */; };
 		ABEA31B71C4ECAD200C386C1 /* SwiftyHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */; };
 		ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */; };
-		ABEA31D51C4ECC2100C386C1 /* FrameHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +60,6 @@
 		ABB866791C501DD200E7C8D0 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		ABB8667B1C501DD200E7C8D0 /* UIKit+RegisterCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+RegisterCells.swift"; sourceTree = "<group>"; };
 		ABB8667C1C501DD200E7C8D0 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
-		ABB8667E1C501DD200E7C8D0 /* FrameHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameHelpers.swift; sourceTree = "<group>"; };
 		ABEA319E1C4ECAD200C386C1 /* SwiftyHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEA31A31C4ECAD200C386C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 		ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyHelpersTest.swift; sourceTree = "<group>"; };
 		ABEA31B81C4ECAD200C386C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+RegisterCellTest.swift"; sourceTree = "<group>"; };
-		ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameHelpersTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +128,6 @@
 				ABB866751C501DD200E7C8D0 /* Foundation */,
 				ABB866781C501DD200E7C8D0 /* Operators */,
 				ABB8667A1C501DD200E7C8D0 /* UIKit */,
-				ABB8667D1C501DD200E7C8D0 /* Utils */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -161,14 +156,6 @@
 				ABB8667C1C501DD200E7C8D0 /* UIView+Utils.swift */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		ABB8667D1C501DD200E7C8D0 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				ABB8667E1C501DD200E7C8D0 /* FrameHelpers.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		ABEA31951C4ECAD200C386C1 = {
@@ -207,7 +194,6 @@
 			children = (
 				ABA91B7F1C55B7E4003D0CAB /* Foundation */,
 				ABEA31CC1C4ECC2100C386C1 /* UIKit */,
-				ABEA31CF1C4ECC2100C386C1 /* Utils */,
 				ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */,
 				ABEA31B81C4ECAD200C386C1 /* Info.plist */,
 			);
@@ -223,14 +209,6 @@
 				ABA91B871C55C002003D0CAB /* UIView+UtilsTest.swift */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		ABEA31CF1C4ECC2100C386C1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +261,11 @@
 				TargetAttributes = {
 					ABEA319D1C4ECAD200C386C1 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					ABEA31B11C4ECAD200C386C1 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = ABEA319D1C4ECAD200C386C1;
 					};
 				};
@@ -341,7 +321,6 @@
 				ABEA31A41C4ECAD200C386C1 /* ViewController.swift in Sources */,
 				ABB866821C501DD200E7C8D0 /* UIKit+RegisterCells.swift in Sources */,
 				ABB866831C501DD200E7C8D0 /* UIView+Utils.swift in Sources */,
-				ABB866841C501DD200E7C8D0 /* FrameHelpers.swift in Sources */,
 				ABB866811C501DD200E7C8D0 /* Operators.swift in Sources */,
 				ABB8667F1C501DD200E7C8D0 /* NSDate+Utils.swift in Sources */,
 				ABEA31A21C4ECAD200C386C1 /* AppDelegate.swift in Sources */,
@@ -362,7 +341,6 @@
 				ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */,
 				ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */,
 				AB206CC41C8FC0E8007BB330 /* TestCollectionViewCell.swift in Sources */,
-				ABEA31D51C4ECC2100C386C1 /* FrameHelpersTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -498,6 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -509,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyHelpers.app/SwiftyHelpers";
 			};
 			name = Debug;
@@ -521,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyHelpers.app/SwiftyHelpers";
 			};
 			name = Release;

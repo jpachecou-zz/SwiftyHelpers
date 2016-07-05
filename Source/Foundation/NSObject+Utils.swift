@@ -19,9 +19,9 @@ extension Identificable {
 
 extension NSObject: Identificable {}
 
-internal func _id<T: AnyObject>(objectClass: T.Type) -> String {
+internal func _id<T: AnyObject>(_ objectClass: T.Type) -> String {
     let name = NSStringFromClass(objectClass)
-    let components = name.componentsSeparatedByString(".")
+    let components = name.components(separatedBy: ".")
     if components.count > 1 {
         return components[1]
     } else {

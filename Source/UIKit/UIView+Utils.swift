@@ -31,7 +31,7 @@ public extension UIView {
  
  - returns: First elemend find of the genericType
  */
-public func getSubviewIntoView<T: UIView>(intoView: UIView) -> T? {
+public func getSubviewIntoView<T: UIView>(_ intoView: UIView) -> T? {
     for view in intoView.subviews {
         if view.classForCoder is T.Type {
             return view as? T
@@ -51,7 +51,7 @@ public func getSubviewIntoView<T: UIView>(intoView: UIView) -> T? {
  - returns: Loaded view class
  */
 public func loadCustomView<T: UIView>() -> T? {
-    let views = NSBundle(forClass: T.self).loadNibNamed(_id(T), owner: nil, options: nil)
+    let views = Bundle(for: T.self).loadNibNamed(_id(T), owner: nil, options: nil)
     if views.count > 0 {
         return views.first as? T
     }
