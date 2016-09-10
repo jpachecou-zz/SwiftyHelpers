@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ABEA31B11C4ECAD200C386C1"
-               BuildableName = "SwiftyHelpersTest.xctest"
-               BlueprintName = "SwiftyHelpersTest"
+               BlueprintIdentifier = "ABFD5AB51D83D021006D1E76"
+               BuildableName = "SwiftyHelpersTests.xctest"
+               BlueprintName = "SwiftyHelpersTests"
                ReferencedContainer = "container:SwiftyHelpers.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -61,8 +61,7 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABEA319D1C4ECAD200C386C1"
@@ -70,7 +69,7 @@
             BlueprintName = "SwiftyHelpers"
             ReferencedContainer = "container:SwiftyHelpers.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,8 +79,7 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABEA319D1C4ECAD200C386C1"
@@ -89,7 +87,7 @@
             BlueprintName = "SwiftyHelpers"
             ReferencedContainer = "container:SwiftyHelpers.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
