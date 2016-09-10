@@ -24,7 +24,8 @@ In order to install through [CocoaPods](http://cocoapods.org), just add this lin
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
-pod 'SwiftyHelpers', '~> 0.1.2'
+
+pod 'SwiftyHelpers', '~> 0.1.4'
 ```
 
 Next, excute in terminal 
@@ -47,38 +48,6 @@ Find a folder named Source and drag onto your project
 ## How to use SwiftyHelpers
 First of all: if you are using CocoaPods, you just need to import `import SwiftyHelpers` module.
 
-
-
-### Date operators 
-
-- Adding/substracting days to a `NSDate`
-
-  	```swift
-  	// Date: 1/1/2016 00:00:00
-  	let testDate = NSDate(timeIntervalSince1970: 1451606400)
-  	let addDate = testDate + 1
-  	print("addDate = \(addDate)") // Prints: addDate = 2016-01-02 00:00:00 +0000
-  	let subtractDate = testDate - 1
-  	print("subtractDate = \(subtractDate)") // Prints: subtractDate = 2015-12-31 00:00:00 +0000
-  	```
-  	
-- Checking dates `<`, `>`, `<=`, `>=`, `==`
-  
-  	```swift
-  	// Date: 1/1/2016 00:00:00
- 	let testDate = NSDate(timeIntervalSince1970: 1451606400)
-  	if NSDate() > testDate {
-  		// Checks if now is greater than that testDate
-  	}
-  	```
-- Checking if a given date is between another two dates range `<=>`
-
-  	```swift
-  	if NSDate() <=> (lessThanDate, greaterThanDate) {
-  		// Checks if a date is within a range of two dates
-  	}
-  	```
-  
 ### Operators and UI functions
 
 - **`UITableView` & `UICollectionView`**
@@ -164,44 +133,7 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
         	return footer
     	 }
 		```
-- **`UIView`**
 
-	- Previously to load a nib file, the `UIView` subclass and `.xib` should have equal name in order to instantiate it.
-	
-		```swift
-		class FooView: UIView {} 
-		/*
-			+-- FooView.swift
-			+-- FooView.xib
-		*/
-		
-		guard let fooView: FooView? = loadCustomView() else { return } 
-		```
-		
-	- Removing recursively subViews from `UIView`, simply using the `removeAllSubViews`
-
-	- Public method `getSubviewIntoView` is used recursively in order to get a specific subView, with a concrete class, inside of the `UIView` subviews.
-	
-		```swift
-		let fooSubview: FooView = getSubviewIntoView(self.view)
-		```
-		This line will locate the first FooView subview inside of all `UIView` array of subviews
-		
-
-	- Use `UIView` and `CGRect` extensions for the getter and setter of a frame attributes
-	
-		```swift
-		let view = UIView()
-		// Setters and getters
-		view.frame.x = 12
-		view.x = 12
-		view.y = 34
-		view.width = 120
-		view.height = 87
-		//Only get
-		view.midY
-		view.maxX
-		```
 	
 ## License
 
