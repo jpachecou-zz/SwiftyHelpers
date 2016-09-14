@@ -52,8 +52,8 @@ public func getSubviewIntoView<T: UIView>(intoView: UIView) -> T? {
  */
 public func loadCustomView<T: UIView>() -> T? {
     let views = NSBundle(forClass: T.self).loadNibNamed(_id(T), owner: nil, options: nil)
-    if views.count > 0 {
-        return views.first as? T
+    if views?.count > 0 {
+        return views?.first as? T
     }
     return nil
 }
