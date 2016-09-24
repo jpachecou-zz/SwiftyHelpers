@@ -26,6 +26,7 @@ platform :ios, '8.0'
 use_frameworks!
 pod 'SwiftyHelpers', '~> 1.0.0'
 ```
+> For swift 2 version, put `pod 'SwiftyHelpers', '~> 0.1.5'`
 
 Next, excute in terminal 
 
