@@ -15,23 +15,19 @@
 		AB4C05331CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4C05311CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib */; };
 		ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */; };
 		ABA91B761C55B0AC003D0CAB /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */; };
-		ABA91B811C55B812003D0CAB /* NSDate+UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */; };
 		ABA91B841C55BFCE003D0CAB /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B831C55BFCE003D0CAB /* TestView.swift */; };
 		ABA91B861C55BFD9003D0CAB /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA91B851C55BFD9003D0CAB /* TestView.xib */; };
 		ABA91B881C55C002003D0CAB /* UIView+UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA91B871C55C002003D0CAB /* UIView+UtilsTest.swift */; };
-		ABB8667F1C501DD200E7C8D0 /* NSDate+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB866761C501DD200E7C8D0 /* NSDate+Utils.swift */; };
 		ABB866801C501DD200E7C8D0 /* NSObject+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB866771C501DD200E7C8D0 /* NSObject+Utils.swift */; };
 		ABB866811C501DD200E7C8D0 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB866791C501DD200E7C8D0 /* Operators.swift */; };
 		ABB866821C501DD200E7C8D0 /* UIKit+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667B1C501DD200E7C8D0 /* UIKit+RegisterCells.swift */; };
 		ABB866831C501DD200E7C8D0 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667C1C501DD200E7C8D0 /* UIView+Utils.swift */; };
-		ABB866841C501DD200E7C8D0 /* FrameHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8667E1C501DD200E7C8D0 /* FrameHelpers.swift */; };
 		ABEA31A21C4ECAD200C386C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */; };
 		ABEA31A41C4ECAD200C386C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31A31C4ECAD200C386C1 /* ViewController.swift */; };
 		ABEA31A71C4ECAD200C386C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31A51C4ECAD200C386C1 /* Main.storyboard */; };
 		ABEA31AC1C4ECAD200C386C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEA31AA1C4ECAD200C386C1 /* LaunchScreen.storyboard */; };
 		ABEA31B71C4ECAD200C386C1 /* SwiftyHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */; };
 		ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */; };
-		ABEA31D51C4ECC2100C386C1 /* FrameHelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,16 +49,13 @@
 		AB4C05311CFE27AA00DAF084 /* TestTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
 		ABA91B731C55B0AC003D0CAB /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		ABA91B741C55B0AC003D0CAB /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
-		ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+UtilsTest.swift"; sourceTree = "<group>"; };
 		ABA91B831C55BFCE003D0CAB /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		ABA91B851C55BFD9003D0CAB /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		ABA91B871C55C002003D0CAB /* UIView+UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UtilsTest.swift"; sourceTree = "<group>"; };
-		ABB866761C501DD200E7C8D0 /* NSDate+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utils.swift"; sourceTree = "<group>"; };
 		ABB866771C501DD200E7C8D0 /* NSObject+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Utils.swift"; sourceTree = "<group>"; };
 		ABB866791C501DD200E7C8D0 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		ABB8667B1C501DD200E7C8D0 /* UIKit+RegisterCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+RegisterCells.swift"; sourceTree = "<group>"; };
 		ABB8667C1C501DD200E7C8D0 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
-		ABB8667E1C501DD200E7C8D0 /* FrameHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameHelpers.swift; sourceTree = "<group>"; };
 		ABEA319E1C4ECAD200C386C1 /* SwiftyHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEA31A11C4ECAD200C386C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEA31A31C4ECAD200C386C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +66,6 @@
 		ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyHelpersTest.swift; sourceTree = "<group>"; };
 		ABEA31B81C4ECAD200C386C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABEA31CE1C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+RegisterCellTest.swift"; sourceTree = "<group>"; };
-		ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameHelpersTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,14 +101,6 @@
 			path = CellTest;
 			sourceTree = "<group>";
 		};
-		ABA91B7F1C55B7E4003D0CAB /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				ABA91B801C55B812003D0CAB /* NSDate+UtilsTest.swift */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
 		ABA91B821C55BFBD003D0CAB /* ViewTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +116,6 @@
 				ABB866751C501DD200E7C8D0 /* Foundation */,
 				ABB866781C501DD200E7C8D0 /* Operators */,
 				ABB8667A1C501DD200E7C8D0 /* UIKit */,
-				ABB8667D1C501DD200E7C8D0 /* Utils */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -140,7 +123,6 @@
 		ABB866751C501DD200E7C8D0 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				ABB866761C501DD200E7C8D0 /* NSDate+Utils.swift */,
 				ABB866771C501DD200E7C8D0 /* NSObject+Utils.swift */,
 			);
 			path = Foundation;
@@ -161,14 +143,6 @@
 				ABB8667C1C501DD200E7C8D0 /* UIView+Utils.swift */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		ABB8667D1C501DD200E7C8D0 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				ABB8667E1C501DD200E7C8D0 /* FrameHelpers.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		ABEA31951C4ECAD200C386C1 = {
@@ -205,9 +179,7 @@
 		ABEA31B51C4ECAD200C386C1 /* SwiftyHelpersTest */ = {
 			isa = PBXGroup;
 			children = (
-				ABA91B7F1C55B7E4003D0CAB /* Foundation */,
 				ABEA31CC1C4ECC2100C386C1 /* UIKit */,
-				ABEA31CF1C4ECC2100C386C1 /* Utils */,
 				ABEA31B61C4ECAD200C386C1 /* SwiftyHelpersTest.swift */,
 				ABEA31B81C4ECAD200C386C1 /* Info.plist */,
 			);
@@ -223,14 +195,6 @@
 				ABA91B871C55C002003D0CAB /* UIView+UtilsTest.swift */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		ABEA31CF1C4ECC2100C386C1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				ABEA31D11C4ECC2100C386C1 /* FrameHelpersTest.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +242,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Grability;
 				TargetAttributes = {
 					ABEA319D1C4ECAD200C386C1 = {
@@ -343,9 +307,7 @@
 				ABEA31A41C4ECAD200C386C1 /* ViewController.swift in Sources */,
 				ABB866821C501DD200E7C8D0 /* UIKit+RegisterCells.swift in Sources */,
 				ABB866831C501DD200E7C8D0 /* UIView+Utils.swift in Sources */,
-				ABB866841C501DD200E7C8D0 /* FrameHelpers.swift in Sources */,
 				ABB866811C501DD200E7C8D0 /* Operators.swift in Sources */,
-				ABB8667F1C501DD200E7C8D0 /* NSDate+Utils.swift in Sources */,
 				ABEA31A21C4ECAD200C386C1 /* AppDelegate.swift in Sources */,
 				ABB866801C501DD200E7C8D0 /* NSObject+Utils.swift in Sources */,
 			);
@@ -357,14 +319,12 @@
 			files = (
 				ABA91B841C55BFCE003D0CAB /* TestView.swift in Sources */,
 				ABEA31B71C4ECAD200C386C1 /* SwiftyHelpersTest.swift in Sources */,
-				ABA91B811C55B812003D0CAB /* NSDate+UtilsTest.swift in Sources */,
 				AB206CC81C8FC0FA007BB330 /* TestCollectionReusableView.swift in Sources */,
 				AB4C05321CFE27AA00DAF084 /* TestTableViewHeaderFooterView.swift in Sources */,
 				ABA91B881C55C002003D0CAB /* UIView+UtilsTest.swift in Sources */,
 				ABA91B751C55B0AC003D0CAB /* TestTableViewCell.swift in Sources */,
 				ABEA31D31C4ECC2100C386C1 /* UIKit+RegisterCellTest.swift in Sources */,
 				AB206CC41C8FC0E8007BB330 /* TestCollectionViewCell.swift in Sources */,
-				ABEA31D51C4ECC2100C386C1 /* FrameHelpersTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,8 +371,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -456,8 +418,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -476,6 +440,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -489,7 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -501,7 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -513,7 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyHelpers.app/SwiftyHelpers";
 			};
 			name = Debug;
@@ -526,7 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grability.ios.SwiftyHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyHelpers.app/SwiftyHelpers";
 			};
 			name = Release;

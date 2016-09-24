@@ -11,5 +11,5 @@ import Foundation
 /**
 *  Date between into two dates
 */
-infix operator <=> { associativity left precedence 160 }
+infix operator <=>: ComparisonPrecedence
 

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SwiftyHelpers'
-  s.version      = '0.1.5'
+  s.version      = '1.0.0'
   s.summary      = 'Elegant helpers to improve the swift syntax'
   s.homepage     = 'https://github.com/jpachecou/SwiftyHelpers'
   s.license      = 'MIT'

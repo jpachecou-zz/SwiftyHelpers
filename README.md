@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/jpachecou/SwiftyHelpers.svg?branch=master)](https://travis-ci.org/jpachecou/SwiftyHelpers)
 [![](https://cocoapod-badges.herokuapp.com/v/SwiftyHelpers/badge.png)](https://cocoapods.org/pods/SwiftyHelpers)
 ![](https://cocoapod-badges.herokuapp.com/p/SwiftyHelpers/badge.png)
-![](https://img.shields.io/badge/Swift-2.3-orange.svg)
+![](https://img.shields.io/badge/Swift-3.0-orange.svg)
 [![](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftyHelpers.svg)](http://cocoadocs.org/docsets/SwiftyHelpers/0.1.2/)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jpachecou/SwiftyHelpers/blob/master/LICENSE.md)
 
@@ -12,7 +12,7 @@ SwiftHelpers is focused on making simpler the most tedious and repeating tasks w
 ## Requirements
 
 - iOS 8.0+
-- XCode 7+
+- XCode 8+
 
 ## Installation guide
 > Dynamic libraries or those made with Swift, require iOS 8.0+
@@ -24,7 +24,7 @@ In order to install through [CocoaPods](http://cocoapods.org), just add this lin
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
-pod 'SwiftyHelpers', '~> 0.1.5'
+pod 'SwiftyHelpers', '~> 1.0.0'
 ```
 
 Next, excute in terminal 
@@ -49,35 +49,6 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 
 
 
-### Date operators 
-
-- Adding/substracting days to a `NSDate`
-
-  	```swift
-  	// Date: 1/1/2016 00:00:00
-  	let testDate = NSDate(timeIntervalSince1970: 1451606400)
-  	let addDate = testDate + 1
-  	print("addDate = \(addDate)") // Prints: addDate = 2016-01-02 00:00:00 +0000
-  	let subtractDate = testDate - 1
-  	print("subtractDate = \(subtractDate)") // Prints: subtractDate = 2015-12-31 00:00:00 +0000
-  	```
-  	
-- Checking dates `<`, `>`, `<=`, `>=`, `==`
-  
-  	```swift
-  	// Date: 1/1/2016 00:00:00
- 	let testDate = NSDate(timeIntervalSince1970: 1451606400)
-  	if NSDate() > testDate {
-  		// Checks if now is greater than that testDate
-  	}
-  	```
-- Checking if a given date is between another two dates range `<=>`
-
-  	```swift
-  	if NSDate() <=> (lessThanDate, greaterThanDate) {
-  		// Checks if a date is within a range of two dates
-  	}
-  	```
   
 ### Operators and UI functions
 
@@ -188,24 +159,10 @@ First of all: if you are using CocoaPods, you just need to import `import Swifty
 		This line will locate the first FooView subview inside of all `UIView` array of subviews
 		
 
-	- Use `UIView` and `CGRect` extensions for the getter and setter of a frame attributes
 	
-		```swift
-		let view = UIView()
-		// Setters and getters
-		view.frame.x = 12
-		view.x = 12
-		view.y = 34
-		view.width = 120
-		view.height = 87
-		//Only get
-		view.midY
-		view.maxX
-		```
-	
-## License
+	## License
 
-SwiftyHelpers is licensed under the MIT-License. See [LICENSE](https://github.com/jpachecou/SwiftyHelpers/blob/master/LICENSE.md) for more details.
+	SwiftyHelpers is licensed under the MIT-License. See [LICENSE](https://github.com/jpachecou/SwiftyHelpers/blob/master/LICENSE.md) for more details.
 
 
 

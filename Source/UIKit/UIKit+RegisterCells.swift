@@ -10,14 +10,14 @@ import UIKit
 
 public extension UITableView {
 
-    internal func registerCellInTableView<T: UITableViewCell>(cellClass: T.Type) {
-        let nib = UINib(nibName: _id(T), bundle: NSBundle(forClass: T.self))
-        self.registerNib(nib, forCellReuseIdentifier: _id(T))
+    internal func registerCellInTableView<T: UITableViewCell>(_ cellClass: T.Type) {
+        let nib = UINib(nibName: _id(T.self), bundle: Bundle(for: T.self))
+        self.register(nib, forCellReuseIdentifier: _id(T.self))
     }
 
-    internal func registerHeaderFooterInTableView<T: UITableViewHeaderFooterView>(headerClass: T.Type) {
-        let nib = UINib(nibName: _id(T), bundle: NSBundle(forClass: T.self))
-        self.registerNib(nib, forHeaderFooterViewReuseIdentifier: _id(T))
+    internal func registerHeaderFooterInTableView<T: UITableViewHeaderFooterView>(_ headerClass: T.Type) {
+        let nib = UINib(nibName: _id(T.self), bundle: Bundle(for: T.self))
+        self.register(nib, forHeaderFooterViewReuseIdentifier: _id(T.self))
     }
 
     /**
@@ -26,7 +26,7 @@ public extension UITableView {
      - returns: Registered cell
      */
     public func cellForClass<T: UITableViewCell>() -> T {
-        return self.dequeueReusableCellWithIdentifier(_id(T.self)) as! T
+        return self.dequeueReusableCell(withIdentifier: _id(T.self)) as! T
     }
 
     /**
@@ -35,21 +35,21 @@ public extension UITableView {
      - returns: Registered cell
      */
     public func headerFooterForClass<T: UITableViewHeaderFooterView>() -> T {
-        return self.dequeueReusableHeaderFooterViewWithIdentifier(_id(T.self)) as! T
+        return self.dequeueReusableHeaderFooterView(withIdentifier: _id(T.self)) as! T
     }
     
 }
 
 public extension UICollectionView {
 
-    internal func registerCellInCollectionView<T: UICollectionViewCell>(cellClass: T.Type) {
-        let nib = UINib(nibName: _id(T), bundle: NSBundle(forClass: T.self))
-        self.registerNib(nib, forCellWithReuseIdentifier: _id(T))
+    internal func registerCellInCollectionView<T: UICollectionViewCell>(_ cellClass: T.Type) {
+        let nib = UINib(nibName: _id(T.self), bundle: Bundle(for: T.self))
+        self.register(nib, forCellWithReuseIdentifier: _id(T.self))
     }
 
-    internal func registerReusableViewInCollectionView<T: UICollectionReusableView>(headerClass: T.Type, kind: String) {
-        let nib = UINib(nibName: _id(T), bundle: NSBundle(forClass: T.self))
-        self.registerNib(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: _id(T))
+    internal func registerReusableViewInCollectionView<T: UICollectionReusableView>(_ headerClass: T.Type, kind: String) {
+        let nib = UINib(nibName: _id(T.self), bundle: Bundle(for: T.self))
+        self.register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: _id(T.self))
     }
     /**
      Obtains the cell registered in the collectionView
@@ -58,8 +58,8 @@ public extension UICollectionView {
      
      - returns: Registered cell
      */
-    public func cellForClass<T: UICollectionViewCell>(indexPath: NSIndexPath) -> T {
-        return self.dequeueReusableCellWithReuseIdentifier(_id(T.self), forIndexPath: indexPath) as! T
+    public func cellForClass<T: UICollectionViewCell>(_ indexPath: IndexPath) -> T {
+        return self.dequeueReusableCell(withReuseIdentifier: _id(T.self), for: indexPath) as! T
     }
     
     /**
@@ -70,8 +70,8 @@ public extension UICollectionView {
      
      - returns: Registered reusable view
      */
-    public func supplementaryViewForClass<T: UICollectionReusableView>(indexPath: NSIndexPath, kind: String) -> T {
-        return self.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: _id(T.self), forIndexPath: indexPath) as! T
+    public func supplementaryViewForClass<T: UICollectionReusableView>(_ indexPath: IndexPath, kind: String) -> T {
+        return self.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: _id(T.self), for: indexPath) as! T
     }
 
     /**
@@ -81,7 +81,7 @@ public extension UICollectionView {
 
      - returns: Registered header reusable view
      */
-    public func headerForClass<T: UICollectionReusableView>(indexPath: NSIndexPath) -> T {
+    public func headerForClass<T: UICollectionReusableView>(_ indexPath: IndexPath) -> T {
         return self.supplementaryViewForClass(indexPath, kind: UICollectionElementKindSectionHeader)
     }
 
@@ -92,7 +92,7 @@ public extension UICollectionView {
 
      - returns: Registered footer reusable view
      */
-    public func footerForClass<T: UICollectionReusableView>(indexPath: NSIndexPath) -> T {
+    public func footerForClass<T: UICollectionReusableView>(_ indexPath: IndexPath) -> T {
         return self.supplementaryViewForClass(indexPath, kind: UICollectionElementKindSectionFooter)
     }
 }
